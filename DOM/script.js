@@ -30,3 +30,38 @@ for(let element of document.all)
 console.log(document.images);
 console.log(document.links);
 console.log(document.forms);
+
+//Get element by ID
+console.log(document.getElementById('new-task'));
+
+//want to change the textContent of the id of header
+let headerElement = document.getElementById('header');
+//headerElement.textContent = 'To-Do-Apps';
+headerElement.innerText = 'To-Do-App';
+
+//shows the same output but
+//innerText prints the way it's showing in browser
+console.log(headerElement.innerText);
+
+//testContent prints the way it has been set
+console.log(headerElement.textContent);
+
+//to find the full html in the type of text
+console.log(headerElement.innerHTML);
+
+//we can also change the style of the element
+headerElement.style.fontStyle = 'italic';
+
+//access all the items class and change the color of them
+let items = document.getElementsByClassName('item');
+for(let i = 0; i < items.length; i++)
+{
+    items[i].style.color = 'blue';
+}
+
+//get element by tag name
+let item1 = document.getElementsByTagName('li');
+console.log(item1);
+
+
+//query selector

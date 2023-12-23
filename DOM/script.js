@@ -64,4 +64,26 @@ let item1 = document.getElementsByTagName('li');
 console.log(item1);
 
 
-//query selector
+//query selector, 1Ta item return kore, first match Ta return kore
+let header1 = document.querySelector('#new-task'); //id
+console.log(header1);
+
+let header2 = document.querySelector('.header');
+console.log(header2);
+
+let lastItem = document.querySelector('.item:last-child');
+console.log(lastItem);
+lastItem.style.color = 'red';
+
+//all last elements
+let lastItems = document.querySelectorAll('.item:last-child');
+console.log(lastItems);
+for(let element of lastItems)
+{
+    element.style.color = 'brown';
+}
+
+//nth child change
+let nItems = document.querySelector('.item:nth-child(2)');
+console.log(nItems);
+nItems.style.color = 'red';
